@@ -1,10 +1,10 @@
 <!DOCTYPE html
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
-
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="x-apple-disable-message-reformatting" />
   <title>Siparişiniz Alındı</title>
   <style type="text/css">
     /* General */
@@ -56,12 +56,54 @@
     .ExternalClass div {
       line-height: 100%;
     }
+
+    /* iOS auto-link fix */
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    /* Gmail iOS link color fix */
+    u + #body a {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+
+    /* Responsive utilities (opt-in per cell) */
+    @media only screen and (max-width: 600px) {
+      .sm-hidden { display: none !important; }
+      .sm-block { display: block !important; width: 100% !important; }
+      .sm-inline { display: inline !important; }
+
+      .sm-w-full { width: 100% !important; }
+      .sm-max-w-none { max-width: none !important; }
+      .sm-h-auto { height: auto !important; }
+
+      .sm-p-0 { padding: 0 !important; }
+      .sm-px-8 { padding-left: 8px !important; padding-right: 8px !important; }
+      .sm-px-16 { padding-left: 16px !important; padding-right: 16px !important; }
+      .sm-pt-12 { padding-top: 12px !important; }
+      .sm-pb-12 { padding-bottom: 12px !important; }
+
+      .sm-text-center { text-align: center !important; }
+      .sm-text-left { text-align: left !important; }
+      .sm-text-right { text-align: right !important; }
+
+      /* Stack helper: apply to a parent table to stack its cells */
+      .stack > tbody > tr > td,
+      .stack > tr > td { display: block !important; width: 100% !important; }
+      .stack img { width: 100% !important; height: auto !important; }
+    }
   </style>
 </head>
 
-<body style="margin: 0; padding: 0; background-color: #F8F8F8; padding: 20px 0;">
+<body id="body" style="margin: 0; padding: 0; background-color: #F8F8F8; padding: 20px 0;">
   <!-- Container -->
-  <table width="650" cellpadding="0" cellspacing="0" border="0" align="center"
+  <table class="email-container" width="100%" cellpadding="0" cellspacing="0" border="0" align="center"
     style="background-color: #FFFFFF; border: 1px solid #ECEFF2; border-radius: 24px; max-width: 650px; width: 100%;">
 
     <!-- Logo -->
@@ -77,21 +119,21 @@
     <tr>
       <td style="padding: 0 16px 24px 16px;">
         <table width="100%" cellpadding="0" cellspacing="0" border="0"
-          style="background-color: #F8F8F8; border-radius: 8px;">
+          style="background-color: #F8F8F8; border-radius: 8px; border-collapse:collapse;">
           <tr>
             <td width="20%" align="center"
-              style="font-size: 12px; color: #292929; font-weight: 600; border-right: 1px solid rgba(17,17,17,0.05);"><a
+              style="font-size: 12px; color: #292929; font-weight: 600; border-right: 1px solid rgba(17,17,17,0.05); word-break:break-word; white-space:normal;"><a
                 href="#" style="padding: 12px 4px; display: block;">Doğum Günü</a></td>
             <td width="20%" align="center"
-              style="font-size: 12px; color: #292929; font-weight: 600; border-right: 1px solid rgba(17,17,17,0.05);"><a
+              style="font-size: 12px; color: #292929; font-weight: 600; border-right: 1px solid rgba(17,17,17,0.05); word-break:break-word; white-space:normal;"><a
                 href="#" style="padding: 12px 4px; display: block;">Tasarım Çiçekler</a></td>
             <td width="20%" align="center"
-              style="font-size: 12px; color: #292929; font-weight: 600; border-right: 1px solid rgba(17,17,17,0.05);"><a
+              style="font-size: 12px; color: #292929; font-weight: 600; border-right: 1px solid rgba(17,17,17,0.05); word-break:break-word; white-space:normal;"><a
                 href="#" style="padding: 12px 4px; display: block;">Hediye</a></td>
             <td width="20%" align="center"
-              style="font-size: 12px; color: #292929; font-weight: 600; border-right: 1px solid rgba(17,17,17,0.05);"><a
+              style="font-size: 12px; color: #292929; font-weight: 600; border-right: 1px solid rgba(17,17,17,0.05); word-break:break-word; white-space:normal;"><a
                 href="#" style="padding: 12px 4px; display: block;">Yenilebilir Çiçek</a></td>
-            <td width="20%" align="center" style="font-size: 12px; color: #292929; font-weight: 600;"><a href="#">Taze
+            <td width="20%" align="center" style="font-size: 12px; color: #292929; font-weight: 600; word-break:break-word; white-space:normal;"><a href="#">Taze
                 Bitki</a></td>
           </tr>
         </table>
@@ -404,10 +446,10 @@
             <td style="padding: 12px;">
               <table width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td width="157" valign="top" style="padding-right: 12px;">
+                  <td class="sm-block sm-w-full sm-p-0" valign="top" style="padding-right: 12px;">
                     <a href="#">
                       <img src="images/demo_img.png" alt="Holiday Orange Roses"
-                        style="width: 157px; height: 157px; border-radius: 8px; display: block; object-fit: cover;" />
+                        style="width: 100%; max-width: 157px; height: auto; border-radius: 8px; display: block; object-fit: cover;" />
                     </a>
                   </td>
                   <td valign="top">
@@ -486,7 +528,7 @@
                             <tr>
                               <td width="36" style="padding-right: 8px;">
                                 <img src="images/demo_img-2.png" alt=""
-                                  style="width: 36px; height: 36px; border-radius: 4px; display: block; object-fit: cover;" />
+                                  style="max-width: 36px; height: auto; border-radius: 4px; display: block; object-fit: cover;" />
                               </td>
                               <td style="font-size: 12px; color: #292929; font-weight: bold;">Sevimli Peluş Tavşan x1
                               </td>
@@ -514,7 +556,7 @@
                             <tr>
                               <td width="36" style="padding-right: 8px;">
                                 <img src="images/demo_img-3.png" alt=""
-                                  style="width: 36px; height: 36px; border-radius: 4px; display: block; object-fit: cover;" />
+                                  style="max-width: 36px; height: auto; border-radius: 4px; display: block; object-fit: cover;" />
                               </td>
                               <td style="font-size: 12px; color: #292929; font-weight: bold;">Taze Ayıcık 22cm x1</td>
                               <td align="right"
@@ -541,7 +583,7 @@
                             <tr>
                               <td width="36" style="padding-right: 8px;">
                                 <img src="images/demo_img-4.png" alt=""
-                                  style="width: 36px; height: 36px; border-radius: 4px; display: block; object-fit: cover;" />
+                                  style="max-width: 36px; height: auto; border-radius: 4px; display: block; object-fit: cover;" />
                               </td>
                               <td style="font-size: 12px; color: #292929; font-weight: bold;">Seni Sevmek Güzel Şey x1
                               </td>
@@ -561,7 +603,6 @@
         </table>
       </td>
     </tr>
-    <!-- Order Details End-->
 
     <!-- Order Details -->
     <tr>
@@ -572,10 +613,10 @@
             <td style="padding: 12px;">
               <table width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td width="157" valign="top" style="padding-right: 12px;">
+                  <td class="sm-block sm-w-full sm-p-0" valign="top" style="padding-right: 12px;">
                     <a href="#">
                       <img src="images/demo_img-5.png" alt="Holiday Orange Roses"
-                        style="width: 157px; height: 157px; border-radius: 8px; display: block; object-fit: cover;" />
+                        style="width: 100%; max-width: 157px; height: auto; border-radius: 8px; display: block; object-fit: cover;" />
                     </a>
                   </td>
                   <td valign="top">
@@ -654,7 +695,7 @@
                             <tr>
                               <td width="36" style="padding-right: 8px;">
                                 <img src="images/demo_img-2.png" alt=""
-                                  style="width: 36px; height: 36px; border-radius: 4px; display: block; object-fit: cover;" />
+                                  style="max-width: 36px; height: auto; border-radius: 4px; display: block; object-fit: cover;" />
                               </td>
                               <td style="font-size: 12px; color: #292929; font-weight: bold;">Sevimli Peluş Tavşan x1
                               </td>
@@ -674,7 +715,6 @@
         </table>
       </td>
     </tr>
-    <!-- Order Details End-->
 
     <!-- Info Box -->
     <tr>
@@ -770,9 +810,9 @@
     <tr>
       <td style="padding: 0 16px 24px 16px;">
         <table width="100%" cellpadding="0" cellspacing="0" border="0"
-          style="background-color: #E7F0FF; border-top-left-radius: 12px; border-bottom-left-radius: 12px; border-top-right-radius: 100px; border-bottom-right-radius: 100px;">
+          style="background-color: #E7F0FF; border-top-left-radius: 12px; border-bottom-left-radius: 12px; border-top-right-radius: 100px; border-bottom-right-radius: 100px; table-layout: fixed;">
           <tr>
-            <td align="left" width="70%" style="padding: 24px;">
+            <td class="sm-block sm-text-center sm-px-16 sm-pt-12" align="left" style="padding: 24px;">
               <h3 style="margin: 0 0 24px 0; font-size: 16px; color: #292929; font-weight: bold; text-align: center;">
                 Taze Çiçek Mobil Uygulamamızı İndirin</h3>
 
@@ -799,8 +839,8 @@
                 </tr>
               </table>
             </td>
-            <td width="30%" align="right"><img src="images/label.png" alt="You are the best flower"
-                style="height: 118px; width: 118px; padding: 12px; display: block;"></td>
+            <td class="sm-block sm-text-center" align="right"><img src="images/label.png" alt="You are the best flower"
+                style="width: 100%; max-width: 118px; height: auto; padding: 12px; display: block;"></td>
           </tr>
         </table>
       </td>
